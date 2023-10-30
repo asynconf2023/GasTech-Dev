@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import Algo
+from flaskwebgui import FlaskUI
 app = Flask(__name__)
 resultat = 0
 # Listes d'options pour chaque menu déroulant
@@ -17,6 +18,7 @@ def index():
     kilometrage_selected = None
     annee_selected = None
     if request.method == 'POST':
+        # Récupérer ce que l'utilisateur a envoyer
         voiture_selected = request.form['voiture']
         energie_selected = request.form['energie']
         kilometrage_selected = request.form['kilometrage']

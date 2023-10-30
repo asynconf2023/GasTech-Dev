@@ -1,6 +1,6 @@
 
 def Vehiculescore(nomdelavoiture, carburant, nbKyloParAn):
-
+    #tout le score de la voiture
     citadine = 8
     cabriolet = 6
     berline = 6.5
@@ -45,7 +45,8 @@ def Vehiculescore(nomdelavoiture, carburant, nbKyloParAn):
  
     return totalscore
 def Years(whatYear, nomdelavoiture, carburant, nbKyloParAn):
-    score = Vehiculescore(nomdelavoiture, carburant, nbKyloParAn)    
+    score = Vehiculescore(nomdelavoiture, carburant, nbKyloParAn) 
+    #On ajoute au score le nombre en fonction de l'anné de construction   
     if whatYear == "1960-1970":
         score += 1
     if whatYear == "1970-1990":
